@@ -49,9 +49,9 @@ jobs:
           - label: Apple-Silicon
             runner: macos-14
             artifact: CueToSheet_Mac_AppleSilicon
-          - label: Intel
+          - label: Intel-Rebuild
             runner: macos-13
-            artifact: CueToSheet_Mac_Intel
+            artifact: CueToSheet_Mac_Intel_Rebuild
 
     steps:
       - name: Checkout
@@ -74,6 +74,11 @@ jobs:
           --windowed
           --name CueToSheet
           cue_to_sheet_gui.py
+
+      - name: Ad-hoc sign macOS app
+        run: |
+          codesign --force --deep --sign - dist/CueToSheet.app
+          codesign --verify --deep --strict dist/CueToSheet.app
 
       - name: Zip macOS app
         run: ditto -c -k --sequesterRsrc --keepParent dist/CueToSheet.app "${{ matrix.artifact }}.zip"
