@@ -14,7 +14,7 @@
 
 - Windows 同事：下載 `CueToSheet_Windows`，解壓縮後雙擊 `start_cue_tool.exe`。
 - Mac M1/M2/M3/M4 同事：下載 `CueToSheet_Mac_AppleSilicon`，解壓縮後打開 `CueToSheet.app`。
-- Intel Mac 同事：下載 `CueToSheet_Mac_Intel_Rebuild`，解壓縮後打開 `CueToSheet.app`。
+- Intel Mac 同事：下載 `CueToSheet_Mac_Intel`，解壓縮後打開 `CueToSheet.app`。
 
 ## macOS 安全性提醒
 
