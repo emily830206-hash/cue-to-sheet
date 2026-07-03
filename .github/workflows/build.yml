@@ -49,9 +49,9 @@ jobs:
           - label: Apple-Silicon
             runner: macos-14
             artifact: CueToSheet_Mac_AppleSilicon
-          - label: Intel-Rebuild
-            runner: macos-13
-            artifact: CueToSheet_Mac_Intel_Rebuild
+          - label: Intel
+            runner: macos-15-intel
+            artifact: CueToSheet_Mac_Intel
 
     steps:
       - name: Checkout
